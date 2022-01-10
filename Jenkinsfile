@@ -11,7 +11,8 @@ pipeline{
                 sh 'mvn package'
                 }
         }
-         post {
+         }
+		 post {
         failure {
             script {
                 currentBuild.result = 'FAILURE'
@@ -26,4 +27,4 @@ pipeline{
         }
     }
 }
-}
+
